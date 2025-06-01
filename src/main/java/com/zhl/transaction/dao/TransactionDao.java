@@ -54,8 +54,6 @@ public class TransactionDao {
             return Page.empty();
         }
         int end = Math.min(transactions.size(), start + transactionPagingQueryRequest.getPageSize());
-        return new PageImpl<>(transactions.subList(start,end),
-                PageRequest.of(transactionPagingQueryRequest.getPageNumber(), transactionPagingQueryRequest.getPageNumber()),
-                transactions.size());
+        return new PageImpl<>(transactions.subList(start, end));
     }
 }

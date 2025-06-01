@@ -66,10 +66,10 @@ public class TransactionController {
     }
 
     /**
-     * 删除交易信息
+     * 查询交易信息
      *
      * @param transactionId 交易信息主键Id
-     * @return 删除成功返回True, 删除失败返回False
+     * @return transaction
      */
     @RequestMapping(value = "/queryTransaction/{transactionId:^[1-9]\\d{17}$}", method = RequestMethod.GET)
     public ApiResponse<Transaction> queryTransaction(@PathVariable String transactionId) {
