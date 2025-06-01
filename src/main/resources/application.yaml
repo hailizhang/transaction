@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: transaction
+  cache:
+    cache-names: transaction
+    caffeine:
+      spec: maximumSize=1000,expireAfterWrite=600s
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: cache
