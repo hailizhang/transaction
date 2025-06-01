@@ -1,7 +1,9 @@
 ### 项目说明
     1. 数据存在内存中，使用ConcurrentHashMap实现线程安全的数据存储
     2. 缓存机制：通过spring Cache整合caffeine实现交易数据缓存，提升更新和删除时交易查询性能
-    3. 完整的异常处理：实现全局异常处理器，同一返回标准错误响应格式
+    3. 通过validation对入参进行必填和正则校验
+    4. 完整的防重操作控制，同一笔订单更新和删除不能同时操作
+    5. 完整的异常处理：实现全局异常处理器，同一返回标准错误响应格式
 ### 打包命令
 mvn clean install -Dmaven.test.skip=true
 ### dockerfile文件
